@@ -1,0 +1,6 @@
+# polymer-paper
+Polymer Paper Elements
+
+# usage
+
+link:http://clojars.org/polymer/paper[image:http://clojars.org/polymer/paper/latest-version.svg[]]
