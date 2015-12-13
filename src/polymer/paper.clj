@@ -1,5 +1,5 @@
 (ns polymer.paper
-  (:refer-clojure :exclude [map meta time])
+;;  (:refer-clojure :exclude [map meta time])
   (:require [miraj.markup :refer [make-tag-fns]]))
 
 (println "loading polymer.paper")

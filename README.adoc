@@ -1,6 +1,11 @@
-# polymer-paper
-Polymer Paper Elements
+polymer/paper
+----------------------
+
+Polymer Paper markup functions
+
 
 # usage
 
 link:http://clojars.org/polymer/paper[image:http://clojars.org/polymer/paper/latest-version.svg[]]
+
+
