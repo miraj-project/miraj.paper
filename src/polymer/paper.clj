@@ -2,8 +2,6 @@
 ;;  (:refer-clojure :exclude [map meta time])
   (:require [miraj.markup :refer [make-tag-fns]]))
 
-(println "loading polymer.paper")
-
 (alter-meta! *ns* (fn [m] (assoc m :co-ns true)))
 
 (defonce polymer-paper-tags
@@ -27,8 +25,7 @@
    "input-char-counter"
    "input-container"
    "input-error"
-   "input"
-   "textarea"
+   ["input" "textarea"]
    "item"
    "linear-progress"
    "listbox"
