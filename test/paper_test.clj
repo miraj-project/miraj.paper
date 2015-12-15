@@ -3,6 +3,9 @@
 
 (paper/button)
 
-(paper/textarea)
+(meta (paper/textarea))
+
+(meta (var paper/tabs))
 
 (miraj.markup/serialize (paper/input))
+
