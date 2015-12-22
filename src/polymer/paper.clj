@@ -26,11 +26,14 @@
 (def polymer-paper-tags
   ; fn-tag,  elt-tag,  elt-uri
   [['badge		:paper-badge	 	"paper-badge/paper-badge.html"
-    "<paper-badge> docstring"]
+    "tag: <paper-badge>
+     uri: paper-badge/paper-badge.html"]
    ['button		:paper-button		"paper-button/paper-button.html"
-    "<paper-button> docstring"]
+    "tag: <paper-button>
+	uri: paper-button/paper-button.html"]
    ['card		:paper-card		"paper-card/paper-card.html"
-	"paper-card/paper-card.html docstring"]
+    "tag: <paper-card>
+uri: paper-card/paper-card.html docstring"]
    ['checkbox		:paper-checkbox		"paper-checkbox/paper-checkbox.html"
 	"paper-checkbox/paper-checkbox.html docstring"]
    ['dialog		:paper-dialog		"paper-dialog/paper-dialog.html"
