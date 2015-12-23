@@ -24,7 +24,7 @@
 ;; paper-tabs-icons.html - iron-iconset-svg
 
 (def polymer-paper-tags
-  ; fn-tag,  elt-tag,  elt-uri
+  ; fn-tag,  elt-tag,  elt-uri,  docstring
   [['badge		:paper-badge	 	"paper-badge/paper-badge.html"
     "tag: <paper-badge>
      uri: paper-badge/paper-badge.html"]
