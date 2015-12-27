@@ -2,7 +2,13 @@
 ;;  (:refer-clojure :exclude [map meta time])
   (:require [miraj.markup :refer [make-resource-fns]]))
 
-(alter-meta! *ns* (fn [m] (assoc m :co-ns true)))
+(alter-meta! *ns*
+             (fn [m] (assoc m
+                            :co-ns true
+                            :resource-type :polymer
+                            :resource-pfx "bower_components")))
+
+;;             (fn [m] (assoc m :co-ns true)))
 
    ;; 'behaviors		:behaviors 	"paper-behaviors/paper-behaviors"
    ;; [polymer.paper.behaviors :refer :all]
@@ -24,7 +30,7 @@
 ;; paper-tabs-icons.html - iron-iconset-svg
 
 (def polymer-paper-tags
-  ; fn-tag,  elt-tag,  elt-uri,  docstring
+  ; fn-tag,  elt-kw,  elt-uri,  docstring
   [['badge		:paper-badge	 	"paper-badge/paper-badge.html"
     "tag: <paper-badge>
      uri: paper-badge/paper-badge.html"]
