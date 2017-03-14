@@ -1,0 +1,41 @@
+[{:ns miraj.polymer.paper.behaviors
+  :href "bower_components"
+  :behaviors [{:fn Button
+               :name PaperButtonBehavior
+               :properties [:elevation]
+               :listeners true
+               :href "paper-behaviors/paper-button-behavior.html"}
+              {:fn CheckedElement
+               :name PaperCheckedElementBehavior
+               :href "paper-behaviors/paper-checked-element-behavior.html"}
+              {:fn InkyFocus
+               :name PaperInkyFocusBehavior :href "paper-behaviors/paper-inky-focus-behavior.html"}
+              {:fn Ripple
+               :name PaperRippleBehavior :href "paper-behaviors/paper-ripple-behavior.html"}
+
+              {:fn Dialog
+               :name PaperDialogBehavior :href "paper-dialog-behavior/paper-dialog-behavior.html"}
+              {:fn Spinner
+               :name PaperSpinnerBehavior :href "paper-spinner/paper-spinner-behavior.html"}]}
+
+ {:ns miraj.polymer.paper.input.behaviors
+  :behaviors [{:fn Input
+               :name PaperInputBehavior :href "paper-input/paper-input-behavior.html"}
+              {:fn InputAddon
+               :name PaperInputAddonBehavior :href "paper-input/paper-input-addon-behavior.html"}]}
+
+ {:ns miraj.polymer.paper.item.behaviors
+  :behaviors [{:fn Item
+               :name PaperItemBehavior :href "paper-item/paper-item-behavior.html"}]}
+ ]
+
+
+                      #:miraj{:fn dialog-behavior
+                              :html-tag :paper-dialog-behavior
+                              :assets #:miraj{:href "paper-dialog-behavior/paper-dialog-behavior.html"
+                                              :bower "PolymerElements/paper-dialog-behavior"}
+                              :doc #:miraj{:short "docstring"
+                                           :href "paper-dialog-behavior"}}
+
+
+paper-spinner-behavior.html

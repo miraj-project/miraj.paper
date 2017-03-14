@@ -1,0 +1,435 @@
+[#:miraj{:ns   miraj.polymer.paper
+         :defelements true
+         :nss [] ;; FIXME: we don't need this for wrapping 3rd party libs
+         :lib  :miraj.polymer.paper
+         :name "paper-elements"
+         :vendor polymer
+         :base {:miraj/assets {:miraj/bower [{:cmd "PolymerElements/paper-elements"}
+                                             {:cmd "PolymerElements/paper-dropdown-menu"}]
+                               :miraj/href "/bower_components/"}
+                :miraj/doc {:miraj/short "Miraj Polymer Paper Element functions."
+                            :miraj/href "https://www.webcomponents.org/element/PolymerElements/"}}
+
+         :exports [#:miraj{:defn badge
+                           :html-tag :paper-badge
+                           :assets #:miraj{:href "paper-badge/paper-badge.html"
+                                           :bower "PolymerElements/paper-badge"
+                                           :version "1.1.4"}
+                           :doc #:miraj{:short "<paper-badge> is a circular text badge that is displayed on the top right corner of an element, representing a status or a notification. It will badge the anchor element specified in the `for` attribute, or, if that doesn't exist, centered to the parent node containing it."
+                                        :href "paper-badge"}
+                           :extends Polymer.Element ;; Polymer.LegacyElement
+                           :categories [:flow]}
+
+                   #:miraj{:defn button
+                           :html-tag  :paper-button
+                           :assets #:miraj{:href "paper-button/paper-button.html"
+                                           :bower "PolymerElements/paper-button"
+                                           :version "1.0.14"}
+                           :doc #:miraj{:short "Material design button"
+                                        :href "paper-button"}
+                           :extends Polymer.Element
+                           :categories [:flow :phrasing :interactive :listed :labelable
+                                        :submittable :reassociateable :form-associated]}
+
+                   #:miraj{:defn card
+                           :html-tag :paper-card
+                           :assets #:miraj{:href "paper-card/paper-card.html"
+                                           :bower "PolymerElements/paper-card"
+                                           :version "1.1.4"}
+                           :doc #:miraj{:short "Material design piece of paper with unique related data"
+                                        :href "paper-card"}}
+
+                   #:miraj{:defn checkbox
+                           :html-tag :paper-checkbox
+                           :assets #:miraj{:href "paper-checkbox/paper-checkbox.html"
+                                           :bower "PolymerElements/paper-checkbox"
+                                           :verion "1.4.2"}
+                           :doc #:miraj{:short "A material design checkbox"
+                                        :href "paper-checkbox"}}
+
+                   #:miraj{:defn dialog
+                           :html-tag :paper-dialog
+                           :assets #:miraj{:href "paper-dialog/paper-dialog.html"
+                                           :bower "PolymerElements/paper-dialog"
+                                           :version "1.1.0"}
+                           :doc #:miraj{:short "A Material Design dialog"
+                                        :href "paper-dialog"}}
+
+                   #:miraj{:defn dialog-scrollable
+                           :html-tag :paper-dialog-scrollable
+                           :assets #:miraj{:href "paper-dialog-scrollable/paper-dialog-scrollable.html"
+                                           :bower "PolymerElements/paper-dialog-scrollable"
+                                           :version "1.1.5"}
+                           :doc #:miraj{:short "A scrollable area used inside the material design dialog"
+                                        :href "paper-dialog-scrollable"}}
+
+                   #:miraj{:defn drawer-panel
+                           :html-tag :paper-drawer-panel
+                           :assets #:miraj{:href "paper-drawer-panel/paper-drawer-panel.html"
+                                           :bower "PolymerElements/paper-drawer-panel"
+                                           :version "1.0.11"}
+                           :doc #:miraj{:short "A responsive drawer panel"
+                                        :href "paper-drawer-panel"}}
+
+                   #:miraj{:defn dropdown-menu
+                           :html-tag :paper-dropdown-menu
+                           :assets #:miraj{:href "paper-dropdown-menu/paper-dropdown-menu.html"
+                                           :bower "PolymerElements/paper-dropdown-menu"
+                                           :version "1.5.0"}
+                           :doc #:miraj{:short "An element that works similarly to a native browser select"
+                                        :href "paper-dropdown-menu"}}
+
+                   #:miraj{:defn dropdown-menu-light
+                           :html-tag :paper-dropdown-menu-light
+                           :assets #:miraj{:href "paper-dropdown-menu/paper-dropdown-menu-light.html"
+                                           :bower "PolymerElements/paper-dropdown-menu"
+                                           :version "1.5.0"}
+                           :doc #:miraj{:short
+                                        "This is a faster, lighter
+version of `paper-dropdown-menu`, that does not use a `<paper-input>`
+internally. Use this element if you're concerned about the performance
+of this element, i.e., if you plan on using many dropdowns on the same
+page. Note that this element has a slightly different styling API than
+`paper-dropdown-menu`"
+                                        :href "paper-dropdown-menu"}}
+
+                   #:miraj{:defn fab
+                           :html-tag :paper-fab
+                           :assets #:miraj{:href "paper-fab/paper-fab.html"
+                                           :bower "PolymerElements/paper-fab"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "A material design floating action button."
+                                        :href "paper-fab"}}
+
+                   #:miraj{:defn header-panel
+                           :html-tag :paper-header-panel
+                           :assets #:miraj{:href "paper-header-panel/paper-header-panel.html"
+                                           :bower "PolymerElements/paper-header-panel"
+                                           :version "1.1.7"}
+                           :doc #:miraj{:short "<paper-header-panel> a header and content wrapper for layout with headers."
+                                        :href "paper-header-panel"}}
+
+                   #:miraj{:defn icon-button
+                           :html-tag :paper-icon-button
+                           :assets #:miraj{:href "paper-icon-button/paper-icon-button.html"
+                                           :bower "PolymerElements/paper-icon-button"
+                                           :version "1.1.4"}
+                           :doc #:miraj{:short "<paper-icon-button> A material design icon button."
+                                        :href "paper-icon-button"}}
+
+                   #:miraj{:defn icon-button-light
+                           :html-tag :paper-icon-button-light
+                           :assets #:miraj{:href "paper-icon-button/paper-icon-button-light.html"
+                                           :bower "PolymerElements/paper-icon-button"
+                                           :version "1.1.4"}
+                           :doc #:miraj{:short "<paper-icon-button-light> a lightweight version of paper/icon-button."
+                                        :href "paper-icon-button-light"}}
+
+                   #:miraj{:defn input
+                           :html-tag :paper-input
+                           :assets #:miraj{:href "paper-input/paper-input.html"
+                                           :bower "PolymerElements/paper-input"
+                                           :version "1.1.23"}
+                           :doc #:miraj{:short "<paper-input> is a single-line text field with Material Design styling."
+                                        :href "paper-input"}}
+
+                   #:miraj{:defn textarea
+                           :html-tag :paper-textarea
+                           :assets #:miraj{:href "paper-input/paper-textarea.html"
+                                           :bower "PolymerElements/paper-input"
+                                           :version "1.1.23"}
+                           :doc #:miraj{:short "<paper-textarea> is a multi-line text field with Material Design styling."
+                                        :href "paper-textarea"}}
+
+                   #:miraj{:defn item
+                           :html-tag :paper-item
+                           :assets #:miraj{:href "paper-item/paper-item.html"
+                                           :bower "PolymerElements/paper-item"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "<paper-item> is an interactive list item. By default, it is a horizontal flexbox."
+                                        :href "paper-item"}}
+
+                   #:miraj{:defn icon-item
+                           :html-tag :paper-icon-item
+                           :assets #:miraj{:href "paper-item/paper-icon-item.html"
+                                           :bower "PolymerElements/paper-item"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "<paper-icon-item>
+is a convenience element to make an item with icon. It is an
+interactive list item with a fixed-width icon area, according to
+Material Design."
+                                        :href "paper-item/paper-icon-item"}}
+
+                   #:miraj{:defn item-body
+                           :html-tag :paper-item-body
+                           :assets #:miraj{:href "paper-item/paper-item-body.html"
+                                           :bower "PolymerElements/paper-item"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short
+                                        "Use <paper-item-body> in a
+<paper-item> or <paper-icon-item> to make two- or three-line
+items. It is a flex item that is a vertical flexbox."
+                                        :href "paper-item/paper-item-body"}}
+
+                   #:miraj{:defn listbox
+                           :html-tag :paper-listbox
+                           :assets #:miraj{:href "paper-listbox/paper-listbox.html"
+                                           :bower "PolymerElements/paper-listbox"
+                                           :version "1.1.2"}
+                           :doc #:miraj{:short "<paper-listbox>
+implements an accessible listbox control with Material Design
+styling. The focused item is highlighted, and the selected item has
+bolded text."
+                                        :href "paper-listbox"}}
+
+                   #:miraj{:defn material
+                           :html-tag :paper-material
+                           :assets #:miraj{:href "paper-material/paper-material.html"
+                                           :bower "PolymerElements/paper-material"
+                                           :version "1.0.6"}
+                           :doc #:miraj{:short "<paper-material> is
+a container that renders two shadows on top of each other to create
+the effect of a lifted piece of paper."
+                                        :href "paper-material"}}
+
+                   #:miraj{:defn menu
+                           :html-tag :paper-menu
+                           :assets #:miraj{:href "paper-menu/paper-menu.html"
+                                           :bower "PolymerElements/paper-menu"
+                                           :version "1.2.2"}
+                           :doc #:miraj{:short "<paper-menu> implements an accessible menu control with Material Design styling. The focused item
+is highlighted, and the selected item has bolded text."
+                                        :href "paper-menu"}}
+
+                   #:miraj{:defn submenu
+                           :html-tag :paper-submenu
+                           :assets #:miraj{:href "paper-menu/paper-submenu.html"
+                                           :bower "PolymerElements/paper-menu"
+                                           :version "1.2.2"}
+                           :doc #:miraj{:short "<paper-submenu> is a nested menu inside of a parent <paper-menu>. It
+consists of a trigger that expands or collapses another <paper-menu>."
+                                        :href "paper-submenu"}}
+
+                   #:miraj{:defn menu-button
+                           :html-tag :paper-menu-button
+                           :assets #:miraj{:href "paper-menu-button/paper-menu-button.html"
+                                           :bower "PolymerElements/paper-menu-button"
+                                           :version "1.5.2"}
+                           :doc #:miraj{:short "<paper-menu-button> allows one to compose a designated 'trigger' element with another element that represents 'content', to create a dropdown menu that displays the 'content' when the 'trigger' is clicked.
+
+The child element with the class <dropdown-trigger> will be used as
+the 'trigger' element. The child element with the class
+<dropdown-content> will be used as the 'content' element."
+                                        :href "paper-menu-button"}}
+
+                   #:miraj{:defn menu-grow-height-animation
+                           :html-tag :paper-menu-grow-height-animation
+                           :assets #:miraj{:href "paper-menu-button/paper-menu-button-animations.html"
+                                           :bower "PolymerElements/paper-menu-button"
+                                           :version "1.5.2"}
+                           :doc #:miraj{:short "paper-menu animation"
+                                        :href "paper-menu-grow-height-animation"}}
+
+                   #:miraj{:defn menu-grow-width-animation
+                           :html-tag :paper-menu-grow-width-animation
+                           :assets #:miraj{:href "paper-menu-button/paper-menu-button-animations.html"
+                                           :bower "PolymerElements/paper-menu-button"
+                                           :version "1.5.2"}
+                           :doc #:miraj{:short "paper-menu animation"
+                                        :href "paper-menu-grow-width-animation"}}
+
+                   #:miraj{:defn menu-shrink-height-animation
+                           :html-tag :paper-menu-shrink-height-animation
+                           :assets #:miraj{:href "paper-menu-button/paper-menu-button-animations.html"
+                                           :bower "PolymerElements/paper-menu-button"
+                                           :version "1.5.2"}
+                           :doc #:miraj{:short "paper-menu animation"
+                                        :href "paper-menu-shrink-height-animation"}}
+
+                   #:miraj{:defn menu-shrink-width-animation
+                           :html-tag :paper-menu-shrink-width-animation
+                           :assets #:miraj{:href "paper-menu-button/paper-menu-button-animations.html"
+                                           :bower "PolymerElements/paper-menu-button"
+                                           :version "1.5.2"}
+                           :doc #:miraj{:short "paper-menu animation"
+                                        :href "paper-menu-shrink-width-animation"}}
+
+                   #:miraj{:defn progress
+                           :html-tag :paper-progress
+                           :assets #:miraj{:href "paper-progress/paper-progress.html"
+                                           :bower "PolymerElements/paper-progress"
+                                           :version "1.0.11"}
+                           :doc #:miraj{:short "<paper-progress> is
+a material design progress bar, for situations where the percentage
+completed can be determined. They give users a quick sense of how much
+longer an operation will take."
+                                        :href "paper-progress"}}
+
+                   #:miraj{:defn radio-button
+                           :html-tag :paper-radio-button
+                           :assets #:miraj{:href "paper-radio-button/paper-radio-button.html"
+                                           :bower "PolymerElements/paper-radio-button"
+                                           :version "1.3.1"}
+                           :doc
+                           #:miraj{:short "<paper-radio-button> is
+                              a button that can be either checked or
+                              unchecked. User can tap the radio button
+                              to check or uncheck it."
+                                   :href "paper-radio-button"}}
+
+                   #:miraj{:defn radio-group
+                           :html-tag :paper-radio-group
+                           :assets #:miraj{:href "paper-radio-group/paper-radio-group.html"
+                                           :bower "PolymerElements/paper-radio-group"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "<paper-radio-group> allows user to select at most one radio button from a set. Checking one radio button that belongs to a radio group unchecks any previously checked radio button within the same group. Use `selected` to get or set the selected radio button."
+                                        :href "paper-radio-group"}}
+
+                   #:miraj{:defn ripple
+                           :html-tag :paper-ripple
+                           :assets #:miraj{:href "paper-ripple/paper-ripple.html"
+                                           :bower "PolymerElements/paper-ripple"
+                                           :version "1.0.10"}
+                           :doc #:miraj{:short "<paper-ripple>
+                              provides a visual effect that other
+                              paper elements can use to simulate a
+                              rippling effect emanating from the point
+                              of contact.  The effect can be
+                              visualized as a concentric circle with
+                              motion."
+                                        :href "paper-ripple"}}
+
+                   #:miraj{:defn scroll-header-panel
+                           :html-tag :paper-scroll-header-panel
+                           :assets #:miraj{:href "paper-scroll-header-panel/paper-scroll-header-panel.html"
+                                           :bower "PolymerElements/paper-scroll-header-panel"
+                                           :version "1.0.16"}
+                           :doc #:miraj{:short
+                                        "<paper-scroll-header-panel>
+contains a header section and a content section.  The header is
+initially on the top part of the view but it scrolls away with the
+rest of the scrollable content.  Upon scrolling slightly up at any
+point, the header scrolls back into view.  This saves screen space and
+allows users to access important controls by easily moving them back
+to the view."
+                                        :href "paper-scroll-header-panel"}}
+
+                   #:miraj{:defn slider
+                           :html-tag :paper-slider
+                           :assets #:miraj{:href "paper-slider/paper-slider.html"
+                                           :bower "PolymerElements/paper-slider"
+                                           :version "1.0.13"}
+                           :doc #:miraj{:short
+                                        "<paper-slider> allows user to select a value from a range of values by
+moving the slider thumb.  The interactive nature of the slider makes it a
+great choice for settings that reflect intensity levels, such as volume,
+brightness, or color saturation."
+                                        :href "paper-slider"}}
+
+                   #:miraj{:defn spinner
+                           :html-tag :paper-spinner
+                           :assets #:miraj{:href "paper-spinner/paper-spinner.html"
+                                           :bower "PolymerElements/paper-spinner"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "<paper-spinner>
+                              provides a multiple color material
+                              design circular spinner."
+                                        :href "paper-spinner"}}
+
+                   #:miraj{:defn spinner-lite
+                           :html-tag :paper-spinner-lite
+                           :assets #:miraj{:href "paper-spinner/paper-spinner-lite.html"
+                                           :bower "PolymerElements/paper-spinner"
+                                           :version "1.2.1"}
+                           :doc #:miraj{:short "Lightweight version of <paper-spinner>"
+                                        :href "paper-spinner-lite"}}
+
+                   #:miraj{:defn tab
+                           :html-tag :paper-tab
+                           :assets #:miraj{:href "paper-tabs/paper-tab.html"
+                                           :bower "PolymerElements/paper-tabs"
+                                           :version "1.8.0"}
+                           :doc #:miraj{:short "<paper-tab> is styled to look like a tab.  It should be used in conjunction with <paper-tabs>."
+                                        :href "paper-tab"}}
+
+                   #:miraj{:defn tabs
+                           :html-tag :paper-tabs
+                           :assets #:miraj{:href "paper-tabs/paper-tabs.html"
+                                           :bower "PolymerElements/paper-tabs"
+                                           :version "1.8.0"}
+                           :doc #:miraj{:short "<paper-tabs> makes it easy to explore and switch between different views or functional aspects of an app, or to browse categorized data sets."
+                                        :href "paper-tabs"}}
+
+                   #:miraj{:defn toast
+                           :html-tag :paper-toast
+                           :assets #:miraj{:href "paper-toast/paper-toast.html"
+                                           :bower "PolymerElements/paper-toast"
+                                           :version "1.3.0"}
+                           :doc #:miraj{:short "<paper-toast> provides a subtle notification toast. Only one <paper-toast> will be visible on screen."
+                                        :href "paper-toast"}}
+
+                   #:miraj{:defn toggle-button
+                           :html-tag :paper-toggle-button
+                           :assets #:miraj{:href "paper-toggle-button/paper-toggle-button.html"
+                                           :bower "PolymerElements/paper-toggle-button"
+                                           :version "1.3.0"}
+                           :doc #:miraj{:short "<paper-toggle-button> provides a ON/OFF switch that user can toggle the state by tapping or by dragging the switch."
+                                        :href "paper-toggle-button"}}
+
+                   #:miraj{:defn toolbar
+                           :html-tag :paper-toolbar
+                           :assets #:miraj{:href "paper-toolbar/paper-toolbar.html"
+                                           :bower "PolymerElements/paper-toolbar"
+                                           :version "1.1.7"}
+                           :doc #:miraj{:short
+                                        "<paper-toolbar> is a horizontal bar containing items that can be used for
+label, navigation, search and actions.  The items placed inside the
+<paper-toolbar> are projected into a `class='horizontal center layout'` container inside of
+<paper-toolbar>'s Shadow DOM.  You can use flex attributes to control the items'
+sizing."
+
+                                        :href "paper-toolbar"}}
+
+                   #:miraj{:defn tooltip
+                           :html-tag :paper-tooltip
+                           :assets #:miraj{:href "paper-tooltip/paper-tooltip.html"
+                                           :bower "PolymerElements/paper-tooltip"
+                                           :version "1.1.3"}
+                           :doc #:miraj{:short
+                                        "<paper-tooltip> is a label that appears on hover and focus when the user
+hovers over an element with the cursor or with the keyboard. It will be centered
+to an anchor element specified in the `for` attribute, or, if that doesn't exist,
+centered to the parent node containing it."
+                                        :href "paper-tooltip"}}
+                   ]
+         }
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+ #:miraj{:ns   miraj.polymer.paper.input
+         :defelements true
+         :lib  :miraj/polymer
+         :nss []
+         :name "paper-input"
+         :type :polymer
+         :base #:miraj{:assets #:miraj{:bower "PolymerElements/paper-input"
+                                       :href "/bower_components/"}
+                       :doc #:miraj{:short "Miraj Polymer Paper Input components"
+                                    :href "https://www.webcomponents.org/element/PolymerElements/"}}
+         :exports [#:miraj{:defn char-counter
+                           :html-tag :paper-input-char-counter
+                           :assets #:miraj{:href "paper-input/paper-input-char-counter.html"
+                                           :bower "PolymerElements/paper-input"}
+                           :doc #:miraj{:short "paper-input-char-counter docstring"
+                                        :href "paper-input/paper-input-char-counter"}}
+                   #:miraj{:defn container
+                           :html-tag :paper-input-container
+                           :assets #:miraj{:href "paper-input/paper-input-container.html"
+                                           :bower "PolymerElements/paper-input"}
+                           :doc #:miraj{:short "paper-input-container docstring"
+                                        :href "paper-input/paper-input-container"}}
+                   #:miraj{:defn error
+                           :html-tag :paper-input-error
+                           :assets #:miraj{:href "paper-input/paper-input-error.html"
+                                           :bower "PolymerElements/paper-input"}
+                           :doc #:miraj{:short "paper-input-error docstring"
+                                        :href "paper-input/paper-input-error"}}]}]
