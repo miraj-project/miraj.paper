@@ -3,29 +3,29 @@
 
 (set-env!
  ;; :asset-paths #{"resources"}
- :resource-paths #{"dev-resources" "demos/clj"}
+ :resource-paths #{"src/main/clj"} ;; "dev-resources" "demos/clj"}
  :source-paths #{"edn"}
 
  :checkouts '[[miraj/core "0.1.0-SNAPSHOT"]
               [miraj/co-dom "0.1.0-SNAPSHOT"]
               [miraj/boot-miraj "0.1.0-SNAPSHOT"]]
 
- :dependencies   '[[org.clojure/clojure RELEASE :scope "provided"]
+ :dependencies   '[;; [org.clojure/clojure RELEASE :scope "provided"]
+                   [miraj/co-dom "0.1.0-SNAPSHOT"]
 
                    ;; for demos and testing
-                   [org.clojure/clojurescript "1.9.473"]
-                   [hipo "0.5.2"]
+                   [org.clojure/clojurescript "1.9.473" :scope "test"]
+                   [hipo "0.5.2" :scope "test"]
                    [adzerk/boot-cljs "2.0.0-OUTPUTFIX" :scope "test"]
-                   [adzerk/boot-cljs-repl   "0.3.3"] ;; latest release
+                   [adzerk/boot-cljs-repl   "0.3.3" :scope "test"] ;; latest release
                    [adzerk/boot-reload "0.5.1" :scope "test"] ;; cljs
                    [samestep/boot-refresh "0.1.0" :scope "test"] ;; clj reloading
                    [com.cemerick/piggieback "0.2.1"  :scope "test"]
                    [weasel                  "0.7.0"  :scope "test"]
                    [org.clojure/tools.nrepl "0.2.12" :scope "test"]
 
-                   [miraj/co-dom "0.1.0-SNAPSHOT" :scope "test"]
-                   [miraj/core "0.1.0-SNAPSHOT"]
-                   [miraj.polymer/iron "1.2.3-SNAPSHOT"]
+                   [miraj/core "0.1.0-SNAPSHOT" :scope "test"]
+                   [miraj.polymer/iron "1.2.3-SNAPSHOT" :scope "test"]
                    [pandeiro/boot-http "0.7.3" :scope "test"]
 
                    [boot/boot "RELEASE" :scope "test"]
