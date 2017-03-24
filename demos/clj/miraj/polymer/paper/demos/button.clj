@@ -1,17 +1,17 @@
 (ns miraj.polymer.paper.demos.button
-  (:require [miraj.core :as miraj]
+  (:require [miraj.core :refer [defpage]]
             [miraj.html :as h]
             [miraj.polymer.paper :as paper :refer [button]]
             [miraj.polymer.paper.styles :as pstyles :refer [color]]
             [miraj.polymer.iron :as iron :refer [icon]]
             [miraj.polymer.iron.icons :as icons :refer [device]]))
 
-(miraj/defpage ^{:miraj/demonstrates miraj.polymer.paper/button} index
+(defpage index
   "Miraj Polymer Paper Button Demo."
 
   ;; html metadata first
-  {:html/title "Miraj Polymer Paper Button Demo"
-   :html/description "This page demonstrates a Miraj Polymer paper-button."}
+  {::h/title "Miraj Polymer Paper Button Demo"
+   ::h/description "This page demonstrates a Miraj Polymer paper-button."}
 
   ;; for boot-reload
   ;; (:js [{:src "/main.js"}])

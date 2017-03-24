@@ -1,13 +1,13 @@
 (ns miraj.polymer.paper.demos.badge
-  (:require [miraj.core :as miraj]
+  (:require [miraj.core :refer [defpage]]
             [miraj.html :as h]))
 
-(miraj/defpage ^{:miraj/demonstrates miraj.polymer.paper/badge} index
+(defpage index
   "Miraj Polymer Paper Badge Demo."
 
   ;; html metadata first
-  {:html/title "Miraj Polymer Paper Badge Demo"
-   :html/description "This page demonstrates a Miraj Polymer paper-badge."}
+  {::h/title "Miraj Polymer Paper Badge Demo"
+   ::h/description "This page demonstrates a Miraj Polymer paper-badge."}
 
   (:require [miraj.polymer.iron :as iron :refer [demo-snippet]]
             [miraj.polymer.paper :as paper :refer [badge icon-button]])

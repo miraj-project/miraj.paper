@@ -1,13 +1,13 @@
 (ns miraj.polymer.paper.demos.card
-  (:require [miraj.core :as miraj]
+  (:require [miraj.core :refer [defpage]]
             [miraj.html :as h]))
 
-(miraj/defpage ^{:miraj/demonstrates miraj.polymer.paper/card} index
+(defpage index
   "Polymer Paper Card Demo."
 
   ;; html metadata first
-  {:html/title "Miraj Polymer Paper Card Demo"
-   :html/description "This page demonstrates a Miraj Polymer paper-card."}
+  {::h/title "Miraj Polymer Paper Card Demo"
+   ::h/description "This page demonstrates a Miraj Polymer paper-card."}
 
   (:require [miraj.polymer.iron :as iron :refer [collapse icon demo-snippet]]
             [miraj.polymer.paper :as paper :refer [card]])
@@ -132,3 +132,7 @@
     paper-icon-button.white {
       color: white !important;
     }"))
+
+(println "CARD META:" (-> index var meta))
+
+
