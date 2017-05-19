@@ -10,6 +10,8 @@
  ;;              ;;[miraj/boot-miraj "0.1.0-SNAPSHOT"]
  ;;              ]
 
+ :repositories #(conj % ["clojars" {:url "https://clojars.org/repo/"}])
+
  :dependencies   '[[org.clojure/clojure "1.9.0-alpha16"]
                    [miraj/co-dom "1.0.0-SNAPSHOT"]
                    [miraj.polymer/assets "1.8.1-SNAPSHOT"]
