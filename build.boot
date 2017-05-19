@@ -54,11 +54,11 @@
 (task-options!
  repl {:port 8080}
  pom  {:project     +project+
-            :version     +version+
-            :description "Miraj Polymer Paper element functions"
-            :url "https://github.com/mobileink/miraj-project/paper"
-            :scm         {:url "https://github.com/miraj-project/miraj.core.git"}
-            :license     {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}})
+       :version     +version+
+       :description "Miraj Polymer Paper element functions"
+       :url         "https://github.com/miraj-project/polymer-paper"
+       :scm         {:url "https://github.com/miraj-project/polymer-paper.git"}
+       :license     {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}})
 
 (deftask build
   "build a component library"
