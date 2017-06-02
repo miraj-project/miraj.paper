@@ -1,0 +1,42 @@
+<link rel="import"
+      href="/miraj/polymer/assets/iron-demo-helpers/demo-pages-shared-styles.html">
+
+<style is="custom-style" include="demo-pages-shared-styles">
+      #container {
+        max-width: 600px;
+      }
+
+      paper-tabs, paper-toolbar {
+        background-color: var(--paper-blue-900);
+        color: #fff;
+      }
+</style>
+
+<style is="custom-style">
+    paper-tabs[no-bar] paper-tab.iron-selected {
+        color: #ffff8d;
+    }
+</style>
+
+<style is="custom-style">
+    paper-tab[link] a {
+    /* These mixins (from iron-flex-layout) center the link text. */
+    @apply(--layout-horizontal);
+    @apply(--layout-center-center);
+    color: #fff;
+    text-decoration: none;
+    }
+</style>
+
+<style is="custom-style">
+  paper-toolbar {
+  --paper-toolbar-background: var(--paper-blue-900);
+  }
+
+  .self-end {
+  /* This mixin (from iron-flex-layout) aligns the tabs to the
+  bottom of the toolbar. */
+  @apply(--layout-self-end);
+  }
+</style>
+
