@@ -5,22 +5,20 @@
  :resource-paths #{"src/main/clj"} ;; "dev-resources" "demos/clj"}
  :source-paths #{"edn"}
 
- ;; :checkouts '[[miraj/core "0.1.0-SNAPSHOT"]
+ ;; :checkouts '[[miraj/core "1.0.0-SNAPSHOT"]
  ;;              [miraj/co-dom "1.0.0-SNAPSHOT"]
  ;;              ;;[miraj/boot-miraj "0.1.0-SNAPSHOT"]
  ;;              ]
 
  :repositories #(conj % ["clojars" {:url "https://clojars.org/repo/"}])
 
- :dependencies   '[[org.clojure/clojure "1.9.0-alpha16"]
+ :dependencies   '[[org.clojure/clojure "1.9.0-alpha17"]
                    [miraj/co-dom "1.0.0-SNAPSHOT"]
                    [miraj.polymer/assets "1.8.1-SNAPSHOT"]
 
                    ;; ;; for demos and testing
-                   [miraj/core "0.1.0-SNAPSHOT"            :scope "test"]
-                   [miraj/boot-miraj "0.1.0-SNAPSHOT"      :scope "test"]
-                   [adzerk/boot-test "1.0.7"               :scope "test"]
-                   [miraj/html "5.1.0-SNAPSHOT"            :scope "test"]
+                   ;; [miraj/core "1.0.0-SNAPSHOT"            :scope "test"]
+                   ;; [miraj/html "5.1.0-SNAPSHOT"            :scope "test"]
                    ;; [org.clojure/clojurescript "1.9.473" :scope "test"]
                    ;; [hipo "0.5.2"                        :scope "test"]
                    ;; [adzerk/boot-cljs "2.0.0-OUTPUTFIX"  :scope "test"]
@@ -31,9 +29,11 @@
                    ;; [weasel                  "0.7.0"     :scope "test"]
                    ;; ;; [org.clojure/tools.nrepl "0.2.12" :scope "test"]
 
-                   [miraj.polymer/iron "1.2.3-SNAPSHOT"    :scope "test"]
+                   ;; [miraj.polymer/iron "1.2.3-SNAPSHOT"    :scope "test"]
 
                    [pandeiro/boot-http "0.7.3"             :scope "test"]
+                   [miraj/boot-miraj "0.1.0-SNAPSHOT"      :scope "test"]
+                   [adzerk/boot-test "1.0.7"               :scope "test"]
 
                    [org.clojure/tools.namespace "0.2.11"   :scope "test"]
 
@@ -58,7 +58,8 @@
        :description "Miraj Polymer Paper element functions"
        :url         "https://github.com/miraj-project/polymer-paper"
        :scm         {:url "https://github.com/miraj-project/polymer-paper.git"}
-       :license     {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}})
+       :license     {"EPL" "http://www.eclipse.org/legal/epl-v10.html"}}
+ push {:repo "clojars"})
 
 (deftask build
   "build a component library"
@@ -116,11 +117,16 @@
   "Build and install component libraries"
   []
   (comp (build)
-        (target)
         (pom)
         (jar)
         (target)
         (install)))
+
+(deftask deploy
+  "deploy to clojars"
+  []
+  (comp (install-local)
+        (push)))
 
 (deftask monitor
   "monitor the source only, not test"
