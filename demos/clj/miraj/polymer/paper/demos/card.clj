@@ -12,6 +12,12 @@
   (:require [miraj.polymer.iron :as iron :refer [collapse icon demo-snippet]]
             [miraj.polymer.paper :as paper :refer [card]])
 
+  ;; these are lexical dependencies, but data, not functions?
+  ;; (ditto for images?)
+  (:icons [[miraj.polymer.iron communication hardware iron social]
+           [miraj.polymer.iron.icons communication hardware iron social]
+           [miraj.vaadin vaadin]])
+
   (:styles [[miraj.polymer.iron.icons communication hardware iron social]
             [miraj.polymer.iron.styles demo flex-mixins]
             [miraj.polymer.paper.styles color typography]
@@ -28,7 +34,7 @@
                   (h/a {:href "https://www.webcomponents.org/element/PolymerElements/paper-card"}
                        "webcomponents.org" ))
 
-           (h/div {:class "vertical-section-container centered"}
+           (h/div :.vertical-section-container!centered
 
                   (h/h3 "A paper-card with a simple heading, header image, body content, and actions")
                   (iron/demo-snippet
@@ -67,6 +73,7 @@
                                                      (iron/icon {:icon "communication:location-on"})
                                                      (h/span "250ft")))
                                        (h/div ::.cafe-rating
+                                              ;; (iron/icon ::.star {:icon :iron.icons.maps/star"})
                                               (iron/icon ::.star {:icon "star"})
                                               (iron/icon ::.star {:icon "star"})
                                               (iron/icon ::.star {:icon "star"})
